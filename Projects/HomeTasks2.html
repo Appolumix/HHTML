@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Макет с Flexbox</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        header nav ul li {
+            margin-left: 20px;
+        }
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .content {
+            flex: 70%;
+            padding: 20px;
+        }
+        .image {
+            flex: 30%;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .image img {
+            max-width: 100%;
+            height: auto;
+        }
+        footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 15px;
+        }
+        .footer-section {
+            flex: 50%;
+            padding: 10px;
+        }
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+            }
+            .content, .image {
+                flex: 100%;
+            }
+            footer {
+                flex-direction: column;
+            }
+            .footer-section {
+                flex: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Логотип</div>
+        <nav>
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="content">
+            <h2>Основной контент</h2>
+            <p>Здесь располагается основная информация.</p>
+        </section>
+        <section class="image">
+            <img src="image.jpg" alt="Пример изображения">
+        </section>
+    </main>
+    <footer>
+        <section class="footer-section">
+            <h3>Ссылки</h3>
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </section>
+        <section class="footer-section">
+            <h3>Контакты</h3>
+            <p>Email: example@example.com</p>
+            <p>Телефон: +123456789</p>
+        </section>
+    </footer>
+</body>
+</html>

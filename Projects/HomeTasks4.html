@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню с подменю</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+        .menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .menu li {
+            position: relative;
+        }
+        .menu > li {
+            margin-right: 20px;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+        }
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: #444;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .submenu li {
+            width: 150px;
+        }
+        .submenu a {
+            padding: 10px;
+        }
+        .menu li:hover .submenu {
+            display: block;
+        }
+        .hamburger {
+            display: none;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                background-color: #333;
+                position: absolute;
+                width: 100%;
+                top: 50px;
+                left: 0;
+            }
+            .menu li {
+                margin: 0;
+            }
+            .hamburger {
+                display: block;
+            }
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector(".menu");
+            menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <span class="hamburger" onclick="toggleMenu()">☰</span>
+        <ul class="menu">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">О нас</a></li>
+            <li>
+                <a href="#">Услуги</a>
+                <ul class="submenu">
+                    <li><a href="#">Дизайн</a></li>
+                    <li><a href="#">Разработка</a></li>
+                    <li><a href="#">Тестирование</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

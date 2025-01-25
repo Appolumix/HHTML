@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О себе</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        main {
+            padding: 20px;
+        }
+        .about {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .about img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        .skills ul {
+            list-style-type: square;
+        }
+        .contact-form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        @media (min-width: 600px) {
+            .about {
+                flex-direction: row;
+                text-align: left;
+            }
+            .about img {
+                margin-right: 20px;
+            }
+        }
+    </style>
+</body>
+<body>
+    <header>
+        <h1>О себе</h1>
+    </header>
+    <main>
+        <section class="about">
+            <img src="https://i.pinimg.com/736x/15/0f/a8/150fa8800b0a0d5633abc1d1c4db3d87.jpg" alt="Фото профиля">
+            <h1><p>Max V<br><br><br><br></h1></p>
+            <p>Привет! Я веб-разработчик с опытом работы в HTML и CSS</p>
+        </section>
+        <section class="skills">
+            <h2>Навыки</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Python</li>
+            </ul>
+        </section>
+        <section class="contact-form">
+            <h2>Свяжитесь со мной</h2>
+            <form>
+                <input type="text" name="name" placeholder="Имя" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Сообщение" required></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Моя личная страница</p>
+    </footer>
+</body>
+</html>

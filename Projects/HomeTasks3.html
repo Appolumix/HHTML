@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание занятий</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #333;
+            color: white;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        @media (max-width: 768px) {
+            table {
+                display: none;
+            }
+            .schedule-list {
+                display: block;
+                padding: 20px;
+            }
+            .schedule-item {
+                border: 1px solid #ddd;
+                margin-bottom: 10px;
+                padding: 10px;
+                background-color: #f9f9f9;
+            }
+        }
+        @media (min-width: 769px) {
+            .schedule-list {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Расписание занятий</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>День</th>
+                <th>Время</th>
+                <th>Предмет</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Понедельник</td><td>09:00 - 10:30</td><td>Математика</td></tr>
+            <tr><td>Вторник</td><td>10:45 - 12:15</td><td>Физика</td></tr>
+            <tr><td>Среда</td><td>13:00 - 14:30</td><td>История</td></tr>
+            <tr><td>Четверг</td><td>09:00 - 10:30</td><td>Химия</td></tr>
+            <tr><td>Пятница</td><td>11:00 - 12:30</td><td>Литература</td></tr>
+            <tr><td colspan="3">Выходные</td></tr>
+        </tbody>
+    </table>
+    <div class="schedule-list">
+        <div class="schedule-item"><strong>Понедельник:</strong> 09:00 - 10:30 - Математика</div>
+        <div class="schedule-item"><strong>Вторник:</strong> 10:45 - 12:15 - Физика</div>
+        <div class="schedule-item"><strong>Среда:</strong> 13:00 - 14:30 - История</div>
+        <div class="schedule-item"><strong>Четверг:</strong> 09:00 - 10:30 - Химия</div>
+        <div class="schedule-item"><strong>Пятница:</strong> 11:00 - 12:30 - Литература</div>
+        <div class="schedule-item"><strong>Выходные</strong></div>
+    </div>
+</body>
+</html>
