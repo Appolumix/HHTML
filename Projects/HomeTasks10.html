@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анимированный блок</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .block {
+            width: 200px;
+            height: 100px;
+            background-color: #007BFF;
+            color: white;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            justify-content: center;
+            position: relative;
+            transition: transform 0.3s ease-in-out;
+        }
+        .block:hover {
+            transform: rotate(10deg);
+        }
+        .button {
+            position: absolute;
+            bottom: -30px;
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transform: translateY(20px);
+            transition: transform 0.3s ease-in-out;
+        }
+        .block:hover .button {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="block">
+        Наведи на меня
+        <button class="button">Подробнее</button>
+    </div>
+</body>
+</html>
+

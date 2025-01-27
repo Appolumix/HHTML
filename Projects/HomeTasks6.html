@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница с текстом и изображениями</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .image {
+            flex: 1;
+            max-width: 50%;
+            text-align: center;
+        }
+        .image img {
+            max-width: 100%;
+            height: auto;
+        }
+        .text {
+            flex: 1;
+            max-width: 50%;
+            padding: 20px;
+        }
+        @media (max-width: 1024px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .image, .text {
+                max-width: 100%;
+            }
+        }
+        @media (max-width: 768px) {
+            .text {
+                font-size: 14px;
+            }
+            .image img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image">
+            <img src="https://i.pinimg.com/736x/a6/08/77/a60877f4c504988a4b50d880a0df6e22.jpg" alt="Изображение">
+        </div>
+        <div class="text">
+            <h2>Заголовок</h2>
+            <p>Это текстовый блок, который будет адаптироваться под размер экрана.</p>
+        </div>
+    </div>
+</body>
+</html>
+
+HomeTasks6

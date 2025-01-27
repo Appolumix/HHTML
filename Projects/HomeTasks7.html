@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея изображений</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .gallery {
+            display: grid;
+            gap: 10px;
+            padding: 20px;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+        @media (max-width: 1024px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Arnold_B%C3%B6cklin_-_Die_Toteninsel_I_%28Basel%2C_Kunstmuseum%29.jpg" alt="Изображение 1">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Arnold_B%C3%B6cklin_-_Die_Toteninsel_II_%28Metropolitan_Museum_of_Art%29.jpg/1920px-Arnold_B%C3%B6cklin_-_Die_Toteninsel_II_%28Metropolitan_Museum_of_Art%29.jpg" alt="Изображение 2">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Arnold_Boecklin_-_Island_of_the_Dead%2C_Third_Version.JPG/1920px-Arnold_Boecklin_-_Island_of_the_Dead%2C_Third_Version.JPG" alt="Изображение 3">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Arnold_B%C3%B6cklin_-_Die_Toteninsel_-_Version_4_sw.jpg/344px-Arnold_B%C3%B6cklin_-_Die_Toteninsel_-_Version_4_sw.jpg" alt="Изображение 4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Arnold_B%C3%B6cklin_-_Die_Toteninsel_V_%28Museum_der_bildenden_K%C3%BCnste_Leipzig%29.jpg/349px-Arnold_B%C3%B6cklin_-_Die_Toteninsel_V_%28Museum_der_bildenden_K%C3%BCnste_Leipzig%29.jpg" alt="Изображение 5">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Isle_of_the_Dead_%28Hermitage_Version%29.jpg/266px-Isle_of_the_Dead_%28Hermitage_Version%29.jpg" alt="Изображение 6">
+    </div>
+</body>
+</html>
